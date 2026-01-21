@@ -204,10 +204,11 @@
 <body class="font-sans text-slate-800 antialiased overflow-x-hidden bg-slate-50 pb-20 md:pb-0">
 
     <!-- Top Announcement Bar (Conversion Booster) -->
-    <div class="hidden md:flex justify-between items-center bg-brand-900 text-white px-8 py-2 text-sm font-medium z-50 relative border-b border-brand-800">
+    <!-- UPDATED: Increased padding (py-4) and font size (text-base) for desktop -->
+    <div class="hidden md:flex justify-between items-center bg-brand-900 text-white px-8 py-4 text-base font-medium z-50 relative border-b border-brand-800">
         <div class="flex items-center gap-6">
-            <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-brand-400"></i> Serving Clacton, Frinton & Holland-on-Sea</span>
-            <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4 text-brand-400"></i> Mon - Fri: 8am - 6pm</span>
+            <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-5 h-5 text-brand-400"></i> Serving Clacton, Frinton & Holland-on-Sea</span>
+            <span class="flex items-center gap-2"><i data-lucide="clock" class="w-5 h-5 text-brand-400"></i> Mon - Fri: 8am - 6pm</span>
         </div>
         <div class="flex items-center gap-2">
             <span class="text-brand-200">Call for a free quote:</span>
@@ -216,7 +217,8 @@
     </div>
 
     <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-40 transition-all duration-300 py-4 top-0 md:top-9" aria-label="Main navigation">
+    <!-- UPDATED: Changed initial top position to md:top-14 to match new banner height -->
+    <nav id="navbar" class="fixed w-full z-40 transition-all duration-300 py-4 top-0 md:top-14" aria-label="Main navigation">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16 bg-white/95 backdrop-blur-md rounded-2xl shadow-lg px-6 border border-white/20">
                 <!-- Logo -->
@@ -836,12 +838,13 @@
         // Navbar Scroll Effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
+            // Adjust offset for top bar height (UPDATED to match new height)
             if (window.scrollY > 50) {
-                navbar.classList.add('py-2');
-                navbar.classList.remove('py-4');
+                navbar.classList.add('py-2', 'top-0');
+                navbar.classList.remove('py-4', 'md:top-14');
             } else {
-                navbar.classList.add('py-4');
-                navbar.classList.remove('py-2');
+                navbar.classList.add('py-4', 'md:top-14');
+                navbar.classList.remove('py-2', 'top-0');
             }
         });
 
