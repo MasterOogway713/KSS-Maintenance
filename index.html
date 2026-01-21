@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO: Primary Meta Tags -->
+    <title>Window Cleaner Clacton-on-Sea | KSS Cleaning & Maintenance</title>
+    <meta name="description" content="Reliable window and gutter cleaning in Clacton-on-Sea, Frinton, and surrounding areas. Family-run, fully insured, and professional. Get a free quote today from KSS.">
+    <meta name="keywords" content="Window Cleaner Clacton, Gutter Cleaning Clacton-on-Sea, Fascia Cleaning Essex, KSS Cleaning, Family Window Cleaner">
+    <meta name="author" content="KSS Cleaning and Maintenance">
+    <meta name="robots" content="index, follow">
+    
+    <!-- SEO: Open Graph / Facebook -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="KSS Cleaning - Window & Gutter Specialists Clacton">
+    <meta property="og:description" content="Family-owned window and gutter cleaning in Clacton-on-Sea. We bring the sparkle back to your home. 100% Satisfaction Guaranteed.">
+    <meta property="og:url" content="https://ksscleaning.com/">
+    <meta property="og:image" content="hero.jpg">
+
+    <!-- SEO: JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HomeAndConstructionBusiness",
+      "name": "KSS Cleaning and Maintenance",
+      "image": "https://ksscleaning.com/hero.jpg",
+      "description": "Professional window and gutter cleaning services in Clacton-on-Sea. Family-owned and operated.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Clacton-on-Sea",
+        "addressRegion": "Essex",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.7925, 
+        "longitude": 1.1528
+      },
+      "url": "https://ksscleaning.com",
+      "telephone": "+445550123456",
+      "priceRange": "££",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "08:00",
+          "closes": "18:00"
+        }
+      ],
+      "areaServed": ["Clacton-on-Sea", "Frinton-on-Sea", "Holland-on-Sea", "Jaywick", "Walton-on-the-Naze"]
+    }
+    </script>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom Config & Styles -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        heading: ['"Outfit"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            200: '#bae6fd',
+                            300: '#7dd3fc',
+                            400: '#38bdf8',
+                            500: '#0ea5e9', // Sky blue
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                            900: '#0c4a6e', // Deep Navy
+                            950: '#082f49',
+                        }
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        },
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #0c4a6e;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0ea5e9;
+        }
+
+        /* Animation Classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero Image Overlay Gradient */
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(8, 47, 73, 0.95) 0%, rgba(12, 74, 110, 0.6) 100%);
+        }
+        
+        /* FAQ Accordion Transitions */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; transform: translateY(-10px)}
+            100%  {opacity: 1; transform: translateY(0)}
+        }
+
+        /* Range Slider Styling for Comparison */
+        input[type=range]::-webkit-slider-thumb {
+            pointer-events: all;
+            width: 40px;
+            height: 40px;
+            -webkit-appearance: none;
+            cursor: ew-resize;
+        }
+    </style>
+</head>
+<body class="font-sans text-slate-800 antialiased overflow-x-hidden bg-slate-50 pb-20 md:pb-0">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4" aria-label="Main navigation">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg px-6 border border-white/20">
+                <!-- Logo -->
+                <a href="#" class="flex-shrink-0 flex items-center gap-2 cursor-pointer group" aria-label="KSS Cleaning Home">
+                    <div class="bg-brand-600 text-white p-2 rounded-lg group-hover:bg-brand-700 transition-colors">
+                        <i data-lucide="droplets" class="h-6 w-6"></i>
+                    </div>
+                    <span class="font-heading font-bold text-xl text-brand-900 tracking-tight">KSS<span class="text-brand-500">Cleaning</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#home" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Home</a>
+                    <a href="#services" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Services</a>
+                    <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">About</a>
+                    <a href="#faq" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">FAQ</a>
+                    <a href="#contact" class="px-6 py-2.5 bg-brand-600 text-white font-semibold rounded-full hover:bg-brand-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 hover:scale-105">
+                        Get a Quote
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-600 hover:text-brand-600 focus:outline-none" aria-label="Open mobile menu">
+                        <i data-lucide="menu" class="h-8 w-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full px-4 z-40">
+            <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 space-y-4 flex flex-col items-center">
+                <a href="#home" class="mobile-link text-lg font-medium text-slate-700 w-full text-center py-2">Home</a>
+                <a href="#services" class="mobile-link text-lg font-medium text-slate-700 w-full text-center py-2">Services</a>
+                <a href="#about" class="mobile-link text-lg font-medium text-slate-700 w-full text-center py-2">About</a>
+                <a href="#faq" class="mobile-link text-lg font-medium text-slate-700 w-full text-center py-2">FAQ</a>
+                <a href="#contact" class="mobile-link w-full text-center bg-brand-600 text-white py-3 rounded-xl font-semibold">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-start overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="hero.jpg" onerror="this.src='https://placehold.co/1920x1080/0f172a/ffffff?text=Professional+Window+Cleaning'" alt="Sparkling clean residential home windows in Clacton-on-Sea" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-overlay"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-48 md:pt-64 pb-32">
+            <div class="md:w-3/4 lg:w-2/3">
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/20 border border-brand-400/50 backdrop-blur-sm mb-6 animate-fade-in-up">
+                    <span class="flex h-2 w-2 rounded-full bg-brand-400 shadow-[0_0_10px_rgba(56,189,248,0.8)]"></span>
+                    <span class="text-brand-100 font-medium text-sm tracking-wide uppercase shadow-sm">Family Owned & Operated</span>
+                </div>
+                
+                <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-14 drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">
+                    Window Cleaning in <br/>
+                    <span class="text-brand-400">Clacton-on-Sea</span>
+                </h1>
+                
+                <p class="text-lg md:text-xl text-slate-200 mb-16 max-w-lg leading-relaxed animate-fade-in-up" style="animation-delay: 0.2s;">
+                    We are KSS Cleaning. We provide expert <strong>window, gutter, and fascia cleaning</strong> for Clacton, Frinton, Holland-on-Sea and the surrounding areas. Bringing the sparkle back to your home.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-5 animate-fade-in-up mb-24" style="animation-delay: 0.3s;">
+                    <a href="#contact" class="px-8 py-4 bg-white text-brand-900 font-bold rounded-xl shadow-xl hover:bg-brand-50 transition-all transform hover:-translate-y-1 text-center flex items-center justify-center gap-2 hover:shadow-2xl hover:scale-105">
+                        <span>Book Now</span>
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#services" class="px-8 py-4 bg-transparent border-2 border-white text-white font-bold rounded-xl hover:bg-white/10 transition-all text-center">
+                        View Services
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Strip -->
+    <div class="bg-brand-900 py-16 relative z-20 -mt-2 shadow-2xl">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-center items-center gap-12 text-center divide-y md:divide-y-0 md:divide-x divide-brand-800/50">
+                <div class="flex flex-col items-center gap-4 px-8 reveal w-full md:w-auto">
+                    <div class="bg-brand-800/50 p-4 rounded-full">
+                        <i data-lucide="users" class="w-8 h-8 text-brand-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-1">Local Family Team</h3>
+                        <p class="text-brand-200/80 text-sm">Dad & Brothers working for you</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center gap-4 px-8 pt-8 md:pt-0 reveal w-full md:w-auto">
+                     <div class="bg-brand-800/50 p-4 rounded-full">
+                        <i data-lucide="award" class="w-8 h-8 text-brand-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-1">Fully Insured</h3>
+                        <p class="text-brand-200/80 text-sm">Complete peace of mind</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center gap-4 px-8 pt-8 md:pt-0 reveal w-full md:w-auto">
+                     <div class="bg-brand-800/50 p-4 rounded-full">
+                        <i data-lucide="sparkles" class="w-8 h-8 text-brand-300"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-white font-bold text-lg mb-1">Top Equipment</h3>
+                        <p class="text-brand-200/80 text-sm">Purified water systems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase mb-3">Our Expertise</h2>
+                <h2 class="text-4xl md:text-5xl font-heading font-bold text-slate-900 mb-6">Professional Cleaning Services</h2>
+                <p class="text-slate-600 text-lg">We don't just clean; we maintain the integrity and beauty of your property in Essex.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Service 1: Windows -->
+                <div class="group relative bg-slate-50 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 reveal">
+                    <div class="h-48 overflow-hidden">
+                        <img loading="lazy" src="service-window.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Window+Cleaning'" alt="Professional window cleaner cleaning a residential window" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="bg-brand-600 w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:bg-brand-500 transition-colors">
+                            <i data-lucide="grid" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Window Cleaning</h3>
+                        <p class="text-slate-600 mb-6">Interior and exterior window cleaning using purified water systems for a streak-free, crystal clear finish. Safe and effective.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-slate-500"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Frames & Sills Included</li>
+                            <li class="flex items-center text-sm text-slate-500"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Hard to reach windows</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2: Gutters -->
+                <div class="group relative bg-slate-50 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 reveal">
+                    <div class="h-48 overflow-hidden">
+                        <img loading="lazy" src="service-gutter.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Gutter+Cleaning'" alt="Gutter cleaning service" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="bg-brand-600 w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:bg-brand-500 transition-colors">
+                            <i data-lucide="cloud-rain" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Gutter Cleaning</h3>
+                        <p class="text-slate-600 mb-6">Protect your home from water damage. We remove debris, moss, and leaves from all guttering systems to ensure proper flow.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-slate-500"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Before & After photos</li>
+                            <li class="flex items-center text-sm text-slate-500"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Downpipe unblocking</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3: Fascia & Soffits -->
+                <div class="group relative bg-slate-50 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 reveal">
+                    <div class="h-48 overflow-hidden">
+                        <img loading="lazy" src="service-fascia.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Fascia+Cleaning'" alt="Pressure washing driveway" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    </div>
+                    <div class="p-8">
+                        <div class="bg-brand-600 w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:bg-brand-500 transition-colors">
+                            <i data-lucide="home" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-3">Fascia & Maintenance</h3>
+                        <p class="text-slate-600 mb-6">Complete exterior facelifts. We clean fascias, soffits, and provide gentle pressure washing for driveways and patios.</p>
+                        <ul class="space-y-2 mb-6">
+                            <li class="flex items-center text-sm text-slate-500"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> PVC Restoration</li>
+                            <li class="flex items-center text-sm text-slate-500"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i> Conservatory Cleaning</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-24 bg-brand-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase mb-3">Testimonials</h2>
+                <h2 class="text-4xl font-heading font-bold text-slate-900 mb-4">What Our Neighbors Say</h2>
+                <p class="text-slate-600 text-lg">We are proud of our 5-star reputation in Clacton and Frinton.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 reveal hover:shadow-md transition-shadow">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"Absolutely brilliant service. The boys were polite, on time, and my windows have never looked cleaner. Highly recommend KSS!"</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center text-brand-600 font-bold">S</div>
+                        <div>
+                            <p class="font-bold text-slate-900">Sarah J.</p>
+                            <p class="text-xs text-slate-500">Clacton-on-Sea</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 reveal hover:shadow-md transition-shadow">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"Had my gutters cleared and fascias washed. They did a fantastic job and left no mess behind. Great local company."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center text-brand-600 font-bold">M</div>
+                        <div>
+                            <p class="font-bold text-slate-900">Mike T.</p>
+                            <p class="text-xs text-slate-500">Frinton-on-Sea</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 reveal hover:shadow-md transition-shadow">
+                    <div class="flex text-yellow-400 mb-4">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 mb-6 italic">"Reliable and trustworthy. I leave the gate unlocked for them and they text when they're done. Proper old-school service."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center text-brand-600 font-bold">D</div>
+                        <div>
+                            <p class="font-bold text-slate-900">David P.</p>
+                            <p class="text-xs text-slate-500">Holland-on-Sea</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Badges (New) -->
+    <div class="bg-white py-10 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
+            <!-- Replace these icons with actual accreditation logos later -->
+            <div class="flex items-center gap-2">
+                <i data-lucide="shield-check" class="w-8 h-8 text-slate-800"></i>
+                <span class="font-bold text-slate-800">Fully Insured</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i data-lucide="check-circle" class="w-8 h-8 text-slate-800"></i>
+                <span class="font-bold text-slate-800">DBS Checked</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <i data-lucide="thumbs-up" class="w-8 h-8 text-slate-800"></i>
+                <span class="font-bold text-slate-800">Satisfaction Guaranteed</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about" class="py-32 bg-slate-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-20">
+                <div class="w-full lg:w-1/2 relative reveal">
+                    <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-200 rounded-full opacity-50 blur-3xl"></div>
+                    <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-500 rounded-full opacity-30 blur-3xl"></div>
+                    
+                    <div class="relative grid grid-cols-2 gap-4">
+                        <img loading="lazy" src="about-1.jpg" onerror="this.src='https://placehold.co/600x600/e2e8f0/64748b?text=Tools'" alt="Cleaning tools" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <img loading="lazy" src="about-2.jpg" onerror="this.src='https://placehold.co/600x600/e2e8f0/64748b?text=Clean+Glass'" alt="Clean Window" class="rounded-2xl shadow-lg w-full h-64 object-cover mt-8">
+                    </div>
+                    
+                    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-2xl shadow-xl text-center">
+                        <p class="text-4xl font-bold text-brand-600">KSS</p>
+                        <p class="text-slate-600 text-sm font-medium uppercase tracking-wider">Family Team</p>
+                    </div>
+                </div>
+
+                <div class="w-full lg:w-1/2 reveal">
+                    <h2 class="text-brand-600 font-semibold tracking-wide uppercase mb-2">Who We Are</h2>
+                    <h2 class="text-4xl font-heading font-bold text-slate-900 mb-6">More Than Just Cleaners, <br>We're Your Local Neighbors.</h2>
+                    <p class="text-slate-600 text-lg mb-6 leading-relaxed">
+                        KSS Cleaning and Maintenance is a proud family business run by a Dad and his sons. We built this company on the principles of hard work, honesty, and a handshake you can trust.
+                    </p>
+                    <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+                        Serving <strong>Clacton-on-Sea, Frinton, and Holland-on-Sea</strong>, we know the local area and the specific care coastal homes need (especially dealing with salt air). When you hire us, you aren't getting a random crew. You're getting a dedicated family team.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="flex items-start gap-3">
+                            <div class="bg-green-100 p-2 rounded-lg text-green-600">
+                                <i data-lucide="check-circle-2" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Reliable</h4>
+                                <p class="text-slate-500 text-sm">We show up on time, every time.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <div class="bg-blue-100 p-2 rounded-lg text-blue-600">
+                                <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-slate-900">Friendly</h4>
+                                <p class="text-slate-500 text-sm">Service with a smile, guaranteed.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section with Before/After Feature -->
+    <section id="gallery" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
+                <div class="max-w-2xl">
+                    <h2 class="text-brand-600 font-semibold tracking-wide uppercase mb-3">Recent Work</h2>
+                    <h2 class="text-4xl font-heading font-bold text-slate-900">See The KSS Difference</h2>
+                </div>
+                <a href="#contact" class="hidden md:flex items-center gap-2 text-brand-600 font-bold hover:text-brand-700 transition-colors mt-4 md:mt-0">
+                    Get a Quote <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+
+            <!-- Before & After Interactive Slider (New!) -->
+            <div class="relative w-full max-w-4xl mx-auto h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl cursor-ew-resize group mb-16 reveal border-4 border-white">
+                <div class="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded text-sm font-bold z-30">BEFORE</div>
+                <div class="absolute top-4 right-4 bg-brand-600/80 text-white px-3 py-1 rounded text-sm font-bold z-30">AFTER</div>
+                
+                <!-- Background (Dirty) -->
+                <!-- Updated to use specific 'slider-before.jpg' -->
+                <img src="slider-before.jpg" onerror="this.src='https://placehold.co/800x600/334155/ffffff?text=Dirty+Window+Before'" class="absolute inset-0 w-full h-full object-cover" alt="Dirty Surface Before Cleaning">
+                
+                <!-- Foreground (Clean - Clipped) -->
+                <div id="compare-overlay" class="absolute inset-0 w-[50%] overflow-hidden border-r-4 border-white z-10 bg-white">
+                    <!-- Updated to use specific 'slider-after.jpg' -->
+                    <img src="slider-after.jpg" onerror="this.src='https://placehold.co/800x600/0ea5e9/ffffff?text=Clean+Window+After'" class="absolute inset-0 w-[100vw] max-w-none h-full object-cover" alt="Clean Surface After Cleaning">
+                </div>
+
+                <!-- Range Input Control -->
+                <input type="range" min="0" max="100" value="50" class="absolute inset-0 w-full h-full opacity-0 cursor-ew-resize z-20" oninput="updateSlider(this.value)">
+                
+                <!-- Handle Visual -->
+                <div id="compare-handle" class="absolute top-1/2 left-[50%] -translate-x-1/2 -translate-y-1/2 w-12 h-12 bg-white rounded-full shadow-lg z-20 flex items-center justify-center pointer-events-none text-brand-600">
+                    <i data-lucide="chevrons-left-right" class="w-6 h-6"></i>
+                </div>
+            </div>
+
+            <!-- Standard Gallery Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
+                <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer">
+                    <img loading="lazy" src="gallery-1.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Work+1'" alt="Clean residential house exterior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold text-lg">Residential Clean</p>
+                    </div>
+                </div>
+                 <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer">
+                    <img loading="lazy" src="gallery-2.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Work+2'" alt="Gutter cleaning work" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold text-lg">Gutter Clearing</p>
+                    </div>
+                </div>
+                 <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer">
+                    <img loading="lazy" src="gallery-3.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Work+3'" alt="Conservatory cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold text-lg">Conservatory Valet</p>
+                    </div>
+                </div>
+                 <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer">
+                    <img loading="lazy" src="gallery-4.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Work+4'" alt="Commercial window cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold text-lg">Commercial Work</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-brand-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-brand-600 font-semibold tracking-wide uppercase mb-3">FAQ</h2>
+                <h2 class="text-4xl font-heading font-bold text-slate-900 mb-4">Common Questions</h2>
+                <p class="text-slate-600 text-lg">Everything you need to know about our services.</p>
+            </div>
+
+            <div class="space-y-4 reveal">
+                <details class="group bg-white p-6 rounded-2xl cursor-pointer hover:bg-white/80 transition-colors shadow-sm">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900">
+                        <span>Do you clean the window frames and sills?</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 mt-4 leading-relaxed">
+                        Yes! We don't just clean the glass. Every standard window clean includes the frames and sills at no extra cost. It's part of our "whole window" philosophy.
+                    </div>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl cursor-pointer hover:bg-white/80 transition-colors shadow-sm">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900">
+                        <span>Do I need to be home when you clean?</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 mt-4 leading-relaxed">
+                        Not at all. As long as we have access to the rear of your property (side gate etc.), we can carry out the work. We can leave a card or send a text to let you know we've been.
+                    </div>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl cursor-pointer hover:bg-white/80 transition-colors shadow-sm">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900">
+                        <span>How often should I get my windows cleaned?</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 mt-4 leading-relaxed">
+                        Most of our residential customers in Clacton prefer a 4-week or 8-week cycle. This keeps your windows looking great year-round. We can discuss a schedule that suits your budget.
+                    </div>
+                </details>
+
+                <details class="group bg-white p-6 rounded-2xl cursor-pointer hover:bg-white/80 transition-colors shadow-sm">
+                    <summary class="flex justify-between items-center font-bold text-lg text-slate-900">
+                        <span>How do I pay?</span>
+                        <span class="transition-transform group-open:rotate-180">
+                            <i data-lucide="chevron-down" class="w-5 h-5"></i>
+                        </span>
+                    </summary>
+                    <div class="text-slate-600 mt-4 leading-relaxed">
+                        We try to make it easy. We accept Cash, Bank Transfer (BACS), or Cheque. Most customers prefer to transfer the money online after receiving our invoice text.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contact Section with Map -->
+    <section id="contact" class="py-32 bg-brand-900 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-800 skew-x-12 transform translate-x-20 opacity-50 pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                <div class="reveal">
+                    <h2 class="text-brand-400 font-semibold tracking-wide uppercase mb-3">Get In Touch</h2>
+                    <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Ready for a Cleaner Home?</h2>
+                    <p class="text-brand-100 text-lg mb-10">
+                        Contact us today for a free, no-obligation quote. Whether it's a one-off window clean or regular maintenance, we are here to help Clacton residents.
+                    </p>
+                    
+                    <div class="space-y-8">
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="bg-brand-700 p-3 rounded-full">
+                                <i data-lucide="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-brand-200 text-sm">Call or Text Us</p>
+                                <a href="tel:55501234567" class="text-xl font-bold hover:text-brand-300 transition-colors">555-0123-4567</a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="bg-brand-700 p-3 rounded-full">
+                                <i data-lucide="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-brand-200 text-sm">Email Us</p>
+                                <a href="mailto:info@ksscleaning.com" class="text-xl font-bold hover:text-brand-300 transition-colors">info@ksscleaning.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 text-white">
+                            <div class="bg-brand-700 p-3 rounded-full">
+                                <i data-lucide="map-pin" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <p class="text-brand-200 text-sm">Service Area</p>
+                                <p class="text-xl font-bold">Clacton, Frinton, Holland-on-Sea</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Embedded Map (New) -->
+                    <div class="mt-10 rounded-2xl overflow-hidden shadow-lg border-2 border-brand-700 h-64 w-full">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39626.54415494297!2d1.116631628033066!3d51.7905545229202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d96cc5170d473b%3A0x6794695729792671!2sClacton-on-Sea!5e0!3m2!1sen!2suk!4v1709228892811!5m2!1sen!2suk" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-2xl p-8 reveal h-fit">
+                    <h3 class="text-2xl font-bold text-slate-800 mb-6">Request a Free Quote</h3>
+                    <form id="contactForm" onsubmit="handleSubmit(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1" for="name">Name</label>
+                                <input type="text" id="name" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-slate-700 mb-1" for="phone">Phone</label>
+                                <input type="tel" id="phone" required class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="(555) 000-0000">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="service">Service Needed</label>
+                            <select id="service" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all bg-white">
+                                <option>Window Cleaning</option>
+                                <option>Gutter Cleaning</option>
+                                <option>Pressure Washing</option>
+                                <option>Full Maintenance Package</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label class="block text-sm font-medium text-slate-700 mb-1" for="message">Message</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:border-brand-500 outline-none transition-all" placeholder="Tell us about your property..."></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full py-4 bg-brand-600 text-white font-bold rounded-lg hover:bg-brand-700 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+                            Send Message
+                        </button>
+                    </form>
+                    
+                    <div id="successMessage" class="hidden text-center py-8">
+                        <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-500 mb-4">
+                            <i data-lucide="check" class="w-8 h-8"></i>
+                        </div>
+                        <h5 class="text-xl font-bold text-slate-800">Message Sent!</h5>
+                        <p class="text-slate-600">Thanks for contacting KSS. Dad or one of the boys will get back to you shortly!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brand-950 py-12 border-t border-brand-900 pb-24 md:pb-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="flex items-center gap-2">
+                <div class="bg-brand-800 p-2 rounded-lg">
+                    <i data-lucide="droplets" class="h-5 w-5 text-brand-400"></i>
+                </div>
+                <span class="font-heading font-bold text-xl text-white">KSS<span class="text-brand-500">Cleaning</span></span>
+            </div>
+            
+            <div class="text-slate-400 text-sm text-center md:text-right">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> KSS Cleaning and Maintenance. All rights reserved.</p>
+                <p class="mt-1"><span class="opacity-75">Website by a Local Web Developer.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky Call Button -->
+    <div class="fixed bottom-0 left-0 w-full bg-white border-t border-slate-200 p-4 md:hidden z-50 flex gap-4 items-center justify-between shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 bg-brand-100 rounded-full flex items-center justify-center text-brand-600">
+                <i data-lucide="phone" class="w-5 h-5"></i>
+            </div>
+            <div>
+                <p class="text-xs text-slate-500 uppercase font-bold tracking-wide">Call Us Now</p>
+                <p class="font-bold text-slate-900">555-0123-4567</p>
+            </div>
+        </div>
+        <a href="tel:55501234567" class="bg-green-500 text-white px-6 py-2 rounded-full font-bold shadow-md hover:bg-green-600 transition-colors">
+            Call
+        </a>
+    </div>
+
+    <script>
+        lucide.createIcons();
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('py-2'); navbar.classList.remove('py-4');
+            } else {
+                navbar.classList.add('py-4'); navbar.classList.remove('py-2');
+            }
+        });
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
+        
+        const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+        }, observerOptions);
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        
+        function handleSubmit(e) {
+            e.preventDefault();
+            const form = document.getElementById('contactForm');
+            const success = document.getElementById('successMessage');
+            const btn = form.querySelector('button');
+            btn.innerText = 'Sending...';
+            btn.disabled = true;
+            setTimeout(() => { form.style.display = 'none'; success.classList.remove('hidden'); }, 1500);
+        }
+
+        // Before & After Slider Logic
+        function updateSlider(val) {
+            document.getElementById('compare-overlay').style.width = val + '%';
+            document.getElementById('compare-handle').style.left = val + '%';
+        }
+    </script>
+</body>
+</html>
