@@ -88,6 +88,7 @@
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         float: {
@@ -150,6 +151,15 @@
             0%    {opacity: 0; transform: translateY(-10px)}
             100%  {opacity: 1; transform: translateY(0)}
         }
+
+        /* Range Slider Styling for Comparison */
+        input[type=range]::-webkit-slider-thumb {
+            pointer-events: all;
+            width: 40px;
+            height: 40px;
+            -webkit-appearance: none;
+            cursor: ew-resize;
+        }
     </style>
 </head>
 <body class="font-sans text-slate-800 antialiased overflow-x-hidden bg-slate-50 pb-20 md:pb-0">
@@ -172,7 +182,7 @@
                     <a href="#services" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Services</a>
                     <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">About</a>
                     <a href="#faq" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">FAQ</a>
-                    <a href="#contact" class="px-5 py-2.5 bg-brand-600 text-white font-semibold rounded-full hover:bg-brand-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+                    <a href="#contact" class="px-6 py-2.5 bg-brand-600 text-white font-semibold rounded-full hover:bg-brand-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 hover:scale-105">
                         Get a Quote
                     </a>
                 </div>
@@ -187,7 +197,7 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full px-4">
+        <div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full px-4 z-40">
             <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 space-y-4 flex flex-col items-center">
                 <a href="#home" class="mobile-link text-lg font-medium text-slate-700 w-full text-center py-2">Home</a>
                 <a href="#services" class="mobile-link text-lg font-medium text-slate-700 w-full text-center py-2">Services</a>
@@ -482,18 +492,17 @@
             </div>
 
             <!-- Before & After Interactive Slider (New!) -->
-            <div class="relative w-full max-w-4xl mx-auto h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl cursor-ew-resize group mb-16 reveal border-4 border-white">
+            <div id="slider-container" class="relative w-full max-w-4xl mx-auto h-[400px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl cursor-ew-resize group mb-16 reveal border-4 border-white bg-slate-100">
                 <div class="absolute top-4 left-4 bg-black/60 text-white px-3 py-1 rounded text-sm font-bold z-30">BEFORE</div>
                 <div class="absolute top-4 right-4 bg-brand-600/80 text-white px-3 py-1 rounded text-sm font-bold z-30">AFTER</div>
                 
-                <!-- Background (Dirty) -->
-                <!-- Updated to use 'images/slider-before.jpg' -->
-                <img src="images/slider-before.jpg" onerror="this.src='https://placehold.co/800x600/334155/ffffff?text=Dirty+Window+Before'" class="absolute inset-0 w-full h-full object-cover" alt="Dirty Surface Before Cleaning">
+                <!-- Background (Dirty) - Using 'object-contain' for full zoom out -->
+                <img src="images/slider-before.jpg" onerror="this.src='https://placehold.co/800x600/334155/ffffff?text=Dirty+Window+Before'" class="absolute inset-0 w-full h-full object-contain bg-slate-200" alt="Dirty Surface Before Cleaning">
                 
                 <!-- Foreground (Clean - Clipped) -->
-                <div id="compare-overlay" class="absolute inset-0 w-[50%] overflow-hidden border-r-4 border-white z-10 bg-white">
-                    <!-- Updated to use 'images/slider-after.jpg' -->
-                    <img src="images/slider-after.jpg" onerror="this.src='https://placehold.co/800x600/0ea5e9/ffffff?text=Clean+Window+After'" class="absolute inset-0 w-[100vw] max-w-none h-full object-cover" alt="Clean Surface After Cleaning">
+                <div id="compare-overlay" class="absolute inset-0 w-[50%] overflow-hidden border-r-4 border-white z-10 bg-slate-200">
+                    <!-- Foreground (Clean) - Force alignment with JS -->
+                    <img id="slider-after-img" src="images/slider-after.jpg" onerror="this.src='https://placehold.co/800x600/0ea5e9/ffffff?text=Clean+Window+After'" class="absolute top-0 left-0 h-full object-contain max-w-none" alt="Clean Surface After Cleaning">
                 </div>
 
                 <!-- Range Input Control -->
@@ -827,6 +836,18 @@
         function updateSlider(val) {
             document.getElementById('compare-overlay').style.width = val + '%';
             document.getElementById('compare-handle').style.left = val + '%';
+        }
+
+        // Fix: Ensure comparison images align perfectly
+        window.addEventListener('load', syncSliderImages);
+        window.addEventListener('resize', syncSliderImages);
+
+        function syncSliderImages() {
+            const container = document.getElementById('slider-container');
+            const afterImg = document.getElementById('slider-after-img');
+            if (container && afterImg) {
+                afterImg.style.width = container.offsetWidth + 'px';
+            }
         }
     </script>
 </body>
