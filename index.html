@@ -16,7 +16,7 @@
     <meta property="og:title" content="KSS Cleaning - Window & Gutter Specialists Clacton">
     <meta property="og:description" content="Family-owned window and gutter cleaning in Clacton-on-Sea. We bring the sparkle back to your home. 100% Satisfaction Guaranteed.">
     <meta property="og:url" content="https://ksscleaning.com/">
-    <meta property="og:image" content="hero.jpg">
+    <meta property="og:image" content="images/hero.jpg">
 
     <!-- SEO: JSON-LD Schema Markup -->
     <script type="application/ld+json">
@@ -24,7 +24,7 @@
       "@context": "https://schema.org",
       "@type": "HomeAndConstructionBusiness",
       "name": "KSS Cleaning and Maintenance",
-      "image": "https://ksscleaning.com/hero.jpg",
+      "image": "https://ksscleaning.com/images/hero.jpg",
       "description": "Professional window and gutter cleaning services in Clacton-on-Sea. Family-owned and operated.",
       "address": {
         "@type": "PostalAddress",
@@ -88,7 +88,6 @@
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     },
                     keyframes: {
                         float: {
@@ -151,15 +150,6 @@
             0%    {opacity: 0; transform: translateY(-10px)}
             100%  {opacity: 1; transform: translateY(0)}
         }
-
-        /* Range Slider Styling for Comparison */
-        input[type=range]::-webkit-slider-thumb {
-            pointer-events: all;
-            width: 40px;
-            height: 40px;
-            -webkit-appearance: none;
-            cursor: ew-resize;
-        }
     </style>
 </head>
 <body class="font-sans text-slate-800 antialiased overflow-x-hidden bg-slate-50 pb-20 md:pb-0">
@@ -182,7 +172,7 @@
                     <a href="#services" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">Services</a>
                     <a href="#about" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">About</a>
                     <a href="#faq" class="text-slate-600 hover:text-brand-600 font-medium transition-colors">FAQ</a>
-                    <a href="#contact" class="px-6 py-2.5 bg-brand-600 text-white font-semibold rounded-full hover:bg-brand-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 hover:scale-105">
+                    <a href="#contact" class="px-5 py-2.5 bg-brand-600 text-white font-semibold rounded-full hover:bg-brand-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
                         Get a Quote
                     </a>
                 </div>
@@ -197,7 +187,7 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full px-4 z-40">
+        <div id="mobile-menu" class="hidden md:hidden absolute top-24 left-0 w-full px-4">
             <div class="bg-white rounded-2xl shadow-xl border border-slate-100 p-4 space-y-4 flex flex-col items-center">
                 <a href="#home" class="mobile-link text-lg font-medium text-slate-700 w-full text-center py-2">Home</a>
                 <a href="#services" class="mobile-link text-lg font-medium text-slate-700 w-full text-center py-2">Services</a>
@@ -210,8 +200,10 @@
 
     <!-- Hero Section -->
     <section id="home" class="relative min-h-screen flex items-start overflow-hidden">
+        <!-- Background Image -->
         <div class="absolute inset-0 z-0">
-            <img src="hero.jpg" onerror="this.src='https://placehold.co/1920x1080/0f172a/ffffff?text=Professional+Window+Cleaning'" alt="Sparkling clean residential home windows in Clacton-on-Sea" class="w-full h-full object-cover">
+            <!-- Image: images/hero.jpg -->
+            <img src="images/hero.jpg" onerror="this.src='https://placehold.co/1920x1080/0f172a/ffffff?text=Missing:+images/hero.jpg'" alt="Sparkling clean residential home windows in Clacton-on-Sea" class="w-full h-full object-cover">
             <div class="absolute inset-0 hero-overlay"></div>
         </div>
 
@@ -224,6 +216,7 @@
                 
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-heading font-bold text-white leading-tight mb-14 drop-shadow-lg animate-fade-in-up" style="animation-delay: 0.1s;">
                     Window Cleaning in <br/>
+                    <!-- FIXED: Reverted to solid bright Sky Blue for maximum contrast -->
                     <span class="text-brand-400">Clacton-on-Sea</span>
                 </h1>
                 
@@ -232,7 +225,7 @@
                 </p>
                 
                 <div class="flex flex-col sm:flex-row gap-5 animate-fade-in-up mb-24" style="animation-delay: 0.3s;">
-                    <a href="#contact" class="px-8 py-4 bg-white text-brand-900 font-bold rounded-xl shadow-xl hover:bg-brand-50 transition-all transform hover:-translate-y-1 text-center flex items-center justify-center gap-2 hover:shadow-2xl hover:scale-105">
+                    <a href="#contact" class="px-8 py-4 bg-white text-brand-900 font-bold rounded-xl shadow-xl hover:bg-brand-50 transition-all transform hover:-translate-y-1 text-center flex items-center justify-center gap-2">
                         <span>Book Now</span>
                         <i data-lucide="arrow-right" class="w-5 h-5"></i>
                     </a>
@@ -292,7 +285,8 @@
                 <!-- Service 1: Windows -->
                 <div class="group relative bg-slate-50 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 reveal">
                     <div class="h-48 overflow-hidden">
-                        <img loading="lazy" src="service-window.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Window+Cleaning'" alt="Professional window cleaner cleaning a residential window" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <!-- Image: images/service-window.jpg -->
+                        <img src="images/service-window.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Missing:+images/service-window.jpg'" alt="Professional window cleaner cleaning a residential window with pole system" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-8">
                         <div class="bg-brand-600 w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:bg-brand-500 transition-colors">
@@ -310,7 +304,8 @@
                 <!-- Service 2: Gutters -->
                 <div class="group relative bg-slate-50 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 reveal">
                     <div class="h-48 overflow-hidden">
-                        <img loading="lazy" src="service-gutter.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Gutter+Cleaning'" alt="Gutter cleaning service" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <!-- Image: images/service-gutter.jpg -->
+                        <img src="images/service-gutter.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Missing:+images/service-gutter.jpg'" alt="Gutter cleaning service removing debris from roof gutter" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-8">
                         <div class="bg-brand-600 w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:bg-brand-500 transition-colors">
@@ -328,7 +323,8 @@
                 <!-- Service 3: Fascia & Soffits -->
                 <div class="group relative bg-slate-50 rounded-2xl overflow-hidden hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 reveal">
                     <div class="h-48 overflow-hidden">
-                        <img loading="lazy" src="service-fascia.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Fascia+Cleaning'" alt="Pressure washing driveway" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                        <!-- Image: images/service-fascia.jpg -->
+                        <img src="images/service-fascia.jpg" onerror="this.src='https://placehold.co/600x400/e2e8f0/64748b?text=Missing:+images/service-fascia.jpg'" alt="Pressure washing driveway and cleaning house exterior" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
                     </div>
                     <div class="p-8">
                         <div class="bg-brand-600 w-12 h-12 rounded-xl flex items-center justify-center text-white mb-6 shadow-lg group-hover:bg-brand-500 transition-colors">
@@ -356,8 +352,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Testimonial 1 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 reveal hover:shadow-md transition-shadow">
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 reveal">
                     <div class="flex text-yellow-400 mb-4">
                         <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                         <i data-lucide="star" class="w-5 h-5 fill-current"></i>
@@ -374,8 +369,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Testimonial 2 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 reveal hover:shadow-md transition-shadow">
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 reveal">
                     <div class="flex text-yellow-400 mb-4">
                         <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                         <i data-lucide="star" class="w-5 h-5 fill-current"></i>
@@ -392,8 +387,8 @@
                         </div>
                     </div>
                 </div>
-                <!-- Testimonial 3 -->
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 reveal hover:shadow-md transition-shadow">
+
+                <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 reveal">
                     <div class="flex text-yellow-400 mb-4">
                         <i data-lucide="star" class="w-5 h-5 fill-current"></i>
                         <i data-lucide="star" class="w-5 h-5 fill-current"></i>
@@ -414,44 +409,30 @@
         </div>
     </section>
 
-    <!-- Trust Badges (New) -->
-    <div class="bg-white py-10 border-t border-slate-100">
-        <div class="max-w-7xl mx-auto px-4 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
-            <!-- Replace these icons with actual accreditation logos later -->
-            <div class="flex items-center gap-2">
-                <i data-lucide="shield-check" class="w-8 h-8 text-slate-800"></i>
-                <span class="font-bold text-slate-800">Fully Insured</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <i data-lucide="check-circle" class="w-8 h-8 text-slate-800"></i>
-                <span class="font-bold text-slate-800">DBS Checked</span>
-            </div>
-            <div class="flex items-center gap-2">
-                <i data-lucide="thumbs-up" class="w-8 h-8 text-slate-800"></i>
-                <span class="font-bold text-slate-800">Satisfaction Guaranteed</span>
-            </div>
-        </div>
-    </div>
-
     <!-- About Section -->
-    <section id="about" class="py-32 bg-slate-50 overflow-hidden">
+    <section id="about" class="py-32 bg-white overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col lg:flex-row items-center gap-20">
+                <!-- Image Grid -->
                 <div class="w-full lg:w-1/2 relative reveal">
                     <div class="absolute -top-10 -left-10 w-40 h-40 bg-brand-200 rounded-full opacity-50 blur-3xl"></div>
                     <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-brand-500 rounded-full opacity-30 blur-3xl"></div>
                     
                     <div class="relative grid grid-cols-2 gap-4">
-                        <img loading="lazy" src="about-1.jpg" onerror="this.src='https://placehold.co/600x600/e2e8f0/64748b?text=Tools'" alt="Cleaning tools" class="rounded-2xl shadow-lg w-full h-64 object-cover">
-                        <img loading="lazy" src="about-2.jpg" onerror="this.src='https://placehold.co/600x600/e2e8f0/64748b?text=Clean+Glass'" alt="Clean Window" class="rounded-2xl shadow-lg w-full h-64 object-cover mt-8">
+                        <!-- Image: images/about-1.jpg -->
+                        <img src="images/about-1.jpg" onerror="this.src='https://placehold.co/600x600/e2e8f0/64748b?text=Missing:+images/about-1.jpg'" alt="Window cleaning bucket and squeegee tools" class="rounded-2xl shadow-lg w-full h-64 object-cover">
+                        <!-- Image: images/about-2.jpg -->
+                        <img src="images/about-2.jpg" onerror="this.src='https://placehold.co/600x600/e2e8f0/64748b?text=Missing:+images/about-2.jpg'" alt="Crystal clean window with reflection" class="rounded-2xl shadow-lg w-full h-64 object-cover mt-8">
                     </div>
                     
+                    <!-- Experience Badge -->
                     <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-6 rounded-2xl shadow-xl text-center">
                         <p class="text-4xl font-bold text-brand-600">KSS</p>
                         <p class="text-slate-600 text-sm font-medium uppercase tracking-wider">Family Team</p>
                     </div>
                 </div>
 
+                <!-- Content -->
                 <div class="w-full lg:w-1/2 reveal">
                     <h2 class="text-brand-600 font-semibold tracking-wide uppercase mb-2">Who We Are</h2>
                     <h2 class="text-4xl font-heading font-bold text-slate-900 mb-6">More Than Just Cleaners, <br>We're Your Local Neighbors.</h2>
@@ -487,8 +468,8 @@
         </div>
     </section>
 
-    <!-- Gallery Section with Before/After Feature -->
-    <section id="gallery" class="py-24 bg-white">
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row justify-between items-end mb-12 reveal">
                 <div class="max-w-2xl">
@@ -506,13 +487,13 @@
                 <div class="absolute top-4 right-4 bg-brand-600/80 text-white px-3 py-1 rounded text-sm font-bold z-30">AFTER</div>
                 
                 <!-- Background (Dirty) -->
-                <!-- Updated to use specific 'slider-before.jpg' -->
-                <img src="slider-before.jpg" onerror="this.src='https://placehold.co/800x600/334155/ffffff?text=Dirty+Window+Before'" class="absolute inset-0 w-full h-full object-cover" alt="Dirty Surface Before Cleaning">
+                <!-- Updated to use 'images/slider-before.jpg' -->
+                <img src="images/slider-before.jpg" onerror="this.src='https://placehold.co/800x600/334155/ffffff?text=Dirty+Window+Before'" class="absolute inset-0 w-full h-full object-cover" alt="Dirty Surface Before Cleaning">
                 
                 <!-- Foreground (Clean - Clipped) -->
                 <div id="compare-overlay" class="absolute inset-0 w-[50%] overflow-hidden border-r-4 border-white z-10 bg-white">
-                    <!-- Updated to use specific 'slider-after.jpg' -->
-                    <img src="slider-after.jpg" onerror="this.src='https://placehold.co/800x600/0ea5e9/ffffff?text=Clean+Window+After'" class="absolute inset-0 w-[100vw] max-w-none h-full object-cover" alt="Clean Surface After Cleaning">
+                    <!-- Updated to use 'images/slider-after.jpg' -->
+                    <img src="images/slider-after.jpg" onerror="this.src='https://placehold.co/800x600/0ea5e9/ffffff?text=Clean+Window+After'" class="absolute inset-0 w-[100vw] max-w-none h-full object-cover" alt="Clean Surface After Cleaning">
                 </div>
 
                 <!-- Range Input Control -->
@@ -524,28 +505,31 @@
                 </div>
             </div>
 
-            <!-- Standard Gallery Grid -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 reveal">
                 <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer">
-                    <img loading="lazy" src="gallery-1.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Work+1'" alt="Clean residential house exterior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <!-- Image: images/gallery-1.jpg -->
+                    <img src="images/gallery-1.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Missing:+images/gallery-1.jpg'" alt="Clean residential house exterior" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                        <p class="text-white font-bold text-lg">Residential Clean</p>
+                        <p class="text-white font-bold text-lg">Residential Window Clean</p>
                     </div>
                 </div>
                  <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer">
-                    <img loading="lazy" src="gallery-2.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Work+2'" alt="Gutter cleaning work" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <!-- Image: images/gallery-2.jpg -->
+                    <img src="images/gallery-2.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Missing:+images/gallery-2.jpg'" alt="Gutter cleaning work" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <p class="text-white font-bold text-lg">Gutter Clearing</p>
                     </div>
                 </div>
                  <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer">
-                    <img loading="lazy" src="gallery-3.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Work+3'" alt="Conservatory cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <!-- Image: images/gallery-3.jpg -->
+                    <img src="images/gallery-3.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Missing:+images/gallery-3.jpg'" alt="Conservatory cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <p class="text-white font-bold text-lg">Conservatory Valet</p>
                     </div>
                 </div>
                  <div class="group relative overflow-hidden rounded-xl h-64 cursor-pointer">
-                    <img loading="lazy" src="gallery-4.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Work+4'" alt="Commercial window cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                    <!-- Image: images/gallery-4.jpg -->
+                    <img src="images/gallery-4.jpg" onerror="this.src='https://placehold.co/600x800/e2e8f0/64748b?text=Missing:+images/gallery-4.jpg'" alt="Commercial window cleaning" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <p class="text-white font-bold text-lg">Commercial Work</p>
                     </div>
@@ -555,7 +539,7 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-24 bg-brand-50">
+    <section id="faq" class="py-24 bg-white">
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <h2 class="text-brand-600 font-semibold tracking-wide uppercase mb-3">FAQ</h2>
@@ -564,7 +548,8 @@
             </div>
 
             <div class="space-y-4 reveal">
-                <details class="group bg-white p-6 rounded-2xl cursor-pointer hover:bg-white/80 transition-colors shadow-sm">
+                <!-- Question 1 -->
+                <details class="group bg-slate-50 p-6 rounded-2xl cursor-pointer hover:bg-slate-100 transition-colors">
                     <summary class="flex justify-between items-center font-bold text-lg text-slate-900">
                         <span>Do you clean the window frames and sills?</span>
                         <span class="transition-transform group-open:rotate-180">
@@ -576,7 +561,8 @@
                     </div>
                 </details>
 
-                <details class="group bg-white p-6 rounded-2xl cursor-pointer hover:bg-white/80 transition-colors shadow-sm">
+                <!-- Question 2 -->
+                <details class="group bg-slate-50 p-6 rounded-2xl cursor-pointer hover:bg-slate-100 transition-colors">
                     <summary class="flex justify-between items-center font-bold text-lg text-slate-900">
                         <span>Do I need to be home when you clean?</span>
                         <span class="transition-transform group-open:rotate-180">
@@ -588,7 +574,8 @@
                     </div>
                 </details>
 
-                <details class="group bg-white p-6 rounded-2xl cursor-pointer hover:bg-white/80 transition-colors shadow-sm">
+                <!-- Question 3 -->
+                <details class="group bg-slate-50 p-6 rounded-2xl cursor-pointer hover:bg-slate-100 transition-colors">
                     <summary class="flex justify-between items-center font-bold text-lg text-slate-900">
                         <span>How often should I get my windows cleaned?</span>
                         <span class="transition-transform group-open:rotate-180">
@@ -600,7 +587,8 @@
                     </div>
                 </details>
 
-                <details class="group bg-white p-6 rounded-2xl cursor-pointer hover:bg-white/80 transition-colors shadow-sm">
+                <!-- Question 4 -->
+                <details class="group bg-slate-50 p-6 rounded-2xl cursor-pointer hover:bg-slate-100 transition-colors">
                     <summary class="flex justify-between items-center font-bold text-lg text-slate-900">
                         <span>How do I pay?</span>
                         <span class="transition-transform group-open:rotate-180">
@@ -615,12 +603,14 @@
         </div>
     </section>
 
-    <!-- CTA / Contact Section with Map -->
+    <!-- CTA / Contact Section -->
     <section id="contact" class="py-32 bg-brand-900 relative overflow-hidden">
+        <!-- Decor -->
         <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-800 skew-x-12 transform translate-x-20 opacity-50 pointer-events-none"></div>
         
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+                
                 <div class="reveal">
                     <h2 class="text-brand-400 font-semibold tracking-wide uppercase mb-3">Get In Touch</h2>
                     <h2 class="text-4xl md:text-5xl font-heading font-bold text-white mb-6">Ready for a Cleaner Home?</h2>
@@ -635,7 +625,7 @@
                             </div>
                             <div>
                                 <p class="text-brand-200 text-sm">Call or Text Us</p>
-                                <a href="tel:55501234567" class="text-xl font-bold hover:text-brand-300 transition-colors">555-0123-4567</a>
+                                <a href="tel:55501234567" class="text-xl font-bold hover:text-brand-300 transition-colors">555-0123-4567</a> <!-- Placeholder Number -->
                             </div>
                         </div>
                         
@@ -659,22 +649,10 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Embedded Map (New) -->
-                    <div class="mt-10 rounded-2xl overflow-hidden shadow-lg border-2 border-brand-700 h-64 w-full">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d39626.54415494297!2d1.116631628033066!3d51.7905545229202!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d96cc5170d473b%3A0x6794695729792671!2sClacton-on-Sea!5e0!3m2!1sen!2suk!4v1709228892811!5m2!1sen!2suk" 
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade">
-                        </iframe>
-                    </div>
                 </div>
 
-                <div class="bg-white rounded-2xl shadow-2xl p-8 reveal h-fit">
+                <!-- Contact Form -->
+                <div class="bg-white rounded-2xl shadow-2xl p-8 reveal">
                     <h3 class="text-2xl font-bold text-slate-800 mb-6">Request a Free Quote</h3>
                     <form id="contactForm" onsubmit="handleSubmit(event)" class="space-y-4">
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -709,6 +687,7 @@
                         </button>
                     </form>
                     
+                    <!-- Success Message (Hidden by default) -->
                     <div id="successMessage" class="hidden text-center py-8">
                         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-green-100 text-green-500 mb-4">
                             <i data-lucide="check" class="w-8 h-8"></i>
@@ -720,6 +699,28 @@
             </div>
         </div>
     </section>
+
+    <!-- Service Area Strip -->
+    <div class="bg-slate-900 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h5 class="text-slate-400 uppercase tracking-widest text-sm font-bold mb-6">Proudly Serving Our Local Community</h5>
+            <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-slate-300">
+                <span>Clacton-on-Sea</span>
+                <span class="text-slate-600">•</span>
+                <span>Frinton-on-Sea</span>
+                <span class="text-slate-600">•</span>
+                <span>Holland-on-Sea</span>
+                <span class="text-slate-600">•</span>
+                <span>Walton-on-the-Naze</span>
+                <span class="text-slate-600">•</span>
+                <span>Jaywick</span>
+                <span class="text-slate-600">•</span>
+                <span>Little Clacton</span>
+                <span class="text-slate-600">•</span>
+                <span>St Osyth</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-brand-950 py-12 border-t border-brand-900 pb-24 md:pb-12">
@@ -754,36 +755,72 @@
         </a>
     </div>
 
+    <!-- Scripts -->
     <script>
+        // Initialize Icons
         lucide.createIcons();
+
+        // Navbar Scroll Effect
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                navbar.classList.add('py-2'); navbar.classList.remove('py-4');
+                navbar.classList.add('py-2');
+                navbar.classList.remove('py-4');
             } else {
-                navbar.classList.add('py-4'); navbar.classList.remove('py-2');
+                navbar.classList.add('py-4');
+                navbar.classList.remove('py-2');
             }
         });
+
+        // Mobile Menu Toggle
         const menuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = document.querySelectorAll('.mobile-link');
-        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-        mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
-        
-        const observerOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Scroll Animation (Intersection Observer)
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
         }, observerOptions);
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Form Handling
         function handleSubmit(e) {
             e.preventDefault();
             const form = document.getElementById('contactForm');
             const success = document.getElementById('successMessage');
+            
+            // Simulate sending state
             const btn = form.querySelector('button');
             btn.innerText = 'Sending...';
             btn.disabled = true;
-            setTimeout(() => { form.style.display = 'none'; success.classList.remove('hidden'); }, 1500);
+
+            setTimeout(() => {
+                form.style.display = 'none';
+                success.classList.remove('hidden');
+            }, 1500);
         }
 
         // Before & After Slider Logic
